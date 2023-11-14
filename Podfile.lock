@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.8.1)
+  - Realm (10.44.0):
+    - Realm/Headers (= 10.44.0)
+  - Realm/Headers (10.44.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.8)
+  - Realm (~> 10.44)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Realm
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Realm: 0419a32457873acb720df25bf1d658df36967cf2
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 9d743e02c00218fd26da33225e87a11a4666b395
+
+COCOAPODS: 1.14.2
