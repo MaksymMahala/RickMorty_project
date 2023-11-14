@@ -10,6 +10,7 @@ import SnapKit
 
 class DetailsViewController: UIViewController {
     var selectedLabel: String?
+    var selectedStatus: String?
     var mainImage: String!
     
     var contentView = UIView()
@@ -22,6 +23,8 @@ class DetailsViewController: UIViewController {
     var detailsView2 = UIView()
     var detailsView3 = UIView()
     var detailsView4 = UIView()
+    
+    var status = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,15 @@ class DetailsViewController: UIViewController {
         constraintDetailsView1()
         addDetailsView2()
         constraintDetailsView2()
+        
+        addDetailsView3()
+        addDetailsView4()
+        constraintDetailsView3()
+        constraintDetailsView4()
+        
+        addStatus()
+        constraintStatus()
+
     }
     func addScollView(){
         scrollView.alwaysBounceVertical = true
@@ -82,6 +94,22 @@ class DetailsViewController: UIViewController {
         detailsView2.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(detailsView2)
     }
+    func addDetailsView3(){
+        detailsView3.backgroundColor = UIColor(named: "Color")
+        detailsView3.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(detailsView3)
+    }
+    func addDetailsView4(){
+        detailsView4.backgroundColor = UIColor(named: "Color")
+        detailsView4.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(detailsView4)
+    }
+    func addStatus(){
+        status.text = selectedStatus
+        status.translatesAutoresizingMaskIntoConstraints = false
+        detailsView1.addSubview(status)
+    }
+
 
 
 }
@@ -107,7 +135,7 @@ extension DetailsViewController{
     }
     func constraintMainView() {
         mainView.snp.makeConstraints{ make in
-            make.top.equalTo(40)
+            make.top.equalTo(0)
             make.leading.equalTo(contentView.snp.leading)
             make.trailing.equalTo(contentView.snp.trailing)
             make.width.equalTo(contentView.snp.width)
@@ -125,18 +153,44 @@ extension DetailsViewController{
     }
     func constraintDetailsView1() {
         detailsView1.snp.makeConstraints{ make in
-            make.top.equalTo(500)
+            make.top.equalTo(410)
             make.leading.equalTo(mainView.snp.leading)
-            make.width.equalTo(150)
+            make.width.equalTo(200)
             make.height.equalTo(150)
         }
     }
     func constraintDetailsView2() {
         detailsView2.snp.makeConstraints{ make in
-            make.top.equalTo(500)
+            make.top.equalTo(410)
             make.trailing.equalTo(mainView.snp.trailing)
-            make.width.equalTo(150)
+            make.width.equalTo(200)
             make.height.equalTo(150)
+        }
+    }
+    func constraintDetailsView3() {
+        detailsView3.snp.makeConstraints{ make in
+            make.top.equalTo(570)
+            make.leading.equalTo(mainView.snp.leading)
+            make.width.equalTo(200)
+            make.height.equalTo(150)
+        }
+    }
+    func constraintDetailsView4() {
+        detailsView4.snp.makeConstraints{ make in
+            make.top.equalTo(570)
+            make.trailing.equalTo(mainView.snp.trailing)
+            make.width.equalTo(200)
+            make.height.equalTo(150)
+        }
+    }
+    func constraintStatus() {
+        status.snp.makeConstraints{ make in
+            make.top.equalTo(detailsView1.snp_topMargin)
+            make.trailing.equalTo(detailsView1.snp_trailingMargin)
+            make.leading.equalTo(detailsView1.snp_leadingMargin)
+            make.bottom.equalTo(detailsView1.snp_bottomMargin)
+            make.width.equalTo(100)
+            make.height.equalTo(50)
         }
     }
 }

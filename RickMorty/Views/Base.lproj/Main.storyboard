@@ -69,7 +69,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4YV-eE-KpO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.59996074438095093" green="0.98432594537734985" blue="0.014685750938951969" alpha="0.92163651826365889" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="1eN-md-pBE">
                             <size key="itemSize" width="162" height="156"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -163,7 +163,7 @@
         <scene sceneID="YZ6-KT-7XK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkB-tN-VXy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list.clipboard.fill" catalog="system" id="lCl-kL-JjE"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="lCl-kL-JjE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XhB-Zv-5jb">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -181,9 +181,9 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="list.clipboard.fill" catalog="system" width="103" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="Color">
-            <color red="0.47345149304782613" green="0.72941450639204541" blue="0.65420215699443596" alpha="0.88312293046357615" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.47299998998641968" green="0.72899997234344482" blue="0.65399998426437378" alpha="0.88300001621246338" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

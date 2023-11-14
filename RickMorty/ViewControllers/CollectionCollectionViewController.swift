@@ -52,8 +52,6 @@ class CollectionViewController: UICollectionViewController {
         cell.labelView.text = titleRow.name
         let urlImage = URL(string: titleRow.image)!
         cell.configure(with: urlImage)
-        cell.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        cell.layer.borderWidth = 4
         cell.layer.cornerRadius = 12
         return cell
     }
@@ -62,6 +60,7 @@ class CollectionViewController: UICollectionViewController {
             let itemIndex = model[indexPath.item]
             details.selectedLabel = itemIndex.name
             details.mainImage = itemIndex.image
+            details.selectedStatus = itemIndex.status
             navigationController?.pushViewController(details, animated: true)
         }
     }
