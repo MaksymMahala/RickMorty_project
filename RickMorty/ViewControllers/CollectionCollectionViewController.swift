@@ -11,26 +11,15 @@ class CollectionViewController: UICollectionViewController {
     var model = [Model]()
     var vm = ResponseAPI()
 
-    override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           navigationController?.navigationBar.prefersLargeTitles = true
-
-           let appearance = UINavigationBarAppearance()
-           appearance.backgroundColor = UIColor(named: "Color")
-           appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-           appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-           navigationController?.navigationBar.tintColor = .white
-           navigationController?.navigationBar.standardAppearance = appearance
-           navigationController?.navigationBar.compactAppearance = appearance
-           navigationController?.navigationBar.scrollEdgeAppearance = appearance
-   }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Rick and Morty"
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.green]
+        navigationController?.navigationBar.standardAppearance = appearance
         
             self.vm.loadAPI(){ (result) in
                 self.model = result
@@ -61,6 +50,9 @@ class CollectionViewController: UICollectionViewController {
             details.selectedLabel = itemIndex.name
             details.mainImage = itemIndex.image
             details.selectedStatus = itemIndex.status
+            details.selectedGender = itemIndex.gender
+            details.selectedType = itemIndex.type
+            details.selectedSpecies = itemIndex.species
             navigationController?.pushViewController(details, animated: true)
         }
     }
