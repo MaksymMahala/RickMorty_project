@@ -34,8 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Color"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.14870843140000001" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" name="Color"/>
+                        <color key="barTintColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="nRS-P4-kml" kind="relationship" relationship="viewControllers" id="H5K-1A-wvA"/>
@@ -68,7 +69,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4YV-eE-KpO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.59996074438095093" green="0.98432594537734985" blue="0.014685750938951969" alpha="0.92163651826365889" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="1eN-md-pBE">
                             <size key="itemSize" width="162" height="156"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -87,32 +88,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="170"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9w-iO-TTE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                    <rect key="frame" x="8" y="8" width="144" height="132"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="N0N-hj-oBd"/>
-                                                        <constraint firstAttribute="height" constant="140" id="QgF-cm-GRA"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="ixR-eP-hzf"/>
+                                                        <constraint firstAttribute="height" constant="132" id="349-CV-Fvu"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="RrM-XJ-gtM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXO-Kd-qgl">
-                                                    <rect key="frame" x="0.0" y="134" width="160" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="fVg-1B-p12"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="140" width="120" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="Color"/>
                                             <constraints>
-                                                <constraint firstItem="jXO-Kd-qgl" firstAttribute="trailing" secondItem="p9w-iO-TTE" secondAttribute="trailing" id="PYl-Ue-EGH"/>
-                                                <constraint firstItem="jXO-Kd-qgl" firstAttribute="centerX" secondItem="6uZ-MF-yEU" secondAttribute="centerX" id="S67-Nn-Dvj"/>
+                                                <constraint firstItem="jXO-Kd-qgl" firstAttribute="leading" secondItem="6uZ-MF-yEU" secondAttribute="leading" constant="20" id="6PW-Lr-Kwb"/>
+                                                <constraint firstAttribute="trailing" secondItem="p9w-iO-TTE" secondAttribute="trailing" constant="8" id="DPI-Qy-UB1"/>
                                                 <constraint firstAttribute="height" constant="170" id="bKj-BC-v5j"/>
+                                                <constraint firstItem="p9w-iO-TTE" firstAttribute="centerX" secondItem="jXO-Kd-qgl" secondAttribute="centerX" id="dzc-6a-2b4"/>
+                                                <constraint firstAttribute="bottom" secondItem="jXO-Kd-qgl" secondAttribute="bottom" id="ehO-ge-oWd"/>
                                                 <constraint firstAttribute="width" constant="160" id="hZM-3b-w4R"/>
-                                                <constraint firstItem="jXO-Kd-qgl" firstAttribute="leading" secondItem="p9w-iO-TTE" secondAttribute="leading" id="vpk-Zc-Ou4"/>
-                                                <constraint firstItem="p9w-iO-TTE" firstAttribute="top" secondItem="6uZ-MF-yEU" secondAttribute="top" id="wfi-Vc-1JT"/>
-                                                <constraint firstAttribute="bottom" secondItem="jXO-Kd-qgl" secondAttribute="bottom" id="z9I-RE-Uyz"/>
+                                                <constraint firstItem="p9w-iO-TTE" firstAttribute="leading" secondItem="6uZ-MF-yEU" secondAttribute="leading" constant="8" id="slx-ec-0EC"/>
+                                                <constraint firstItem="jXO-Kd-qgl" firstAttribute="top" secondItem="p9w-iO-TTE" secondAttribute="bottom" id="wzr-Rb-EPY"/>
+                                                <constraint firstItem="p9w-iO-TTE" firstAttribute="top" secondItem="6uZ-MF-yEU" secondAttribute="top" constant="8" id="zkv-dG-HMO"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -184,10 +183,13 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="list.clipboard.fill" catalog="system" width="103" height="128"/>
         <namedColor name="Color">
-            <color red="0.076793482859549983" green="0.22664634627525249" blue="0.099646825116463125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.47345149304782613" green="0.72941450639204541" blue="0.65420215699443596" alpha="0.88312293046357615" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
