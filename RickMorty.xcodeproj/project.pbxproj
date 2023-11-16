@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8493AD662B04C92000346088 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493AD652B04C92000346088 /* LocationViewController.swift */; };
 		84A5A6E82B01864800644541 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84A5A6E72B01864800644541 /* SDWebImage */; };
 		84A5A6EA2B01864800644541 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84A5A6E92B01864800644541 /* SDWebImageMapKit */; };
 		84BEB2A52B00DC85003D3AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEB2A42B00DC85003D3AFC /* AppDelegate.swift */; };
@@ -16,14 +17,16 @@
 		84BEB2AE2B00DC87003D3AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BEB2AD2B00DC87003D3AFC /* Assets.xcassets */; };
 		84BEB2B12B00DC87003D3AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BEB2AF2B00DC87003D3AFC /* LaunchScreen.storyboard */; };
 		84BEB2BB2B00F799003D3AFC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEB2BA2B00F799003D3AFC /* DetailsViewController.swift */; };
-		84BEB2BE2B00F7B6003D3AFC /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEB2BD2B00F7B6003D3AFC /* TableModel.swift */; };
+		84BEB2BE2B00F7B6003D3AFC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEB2BD2B00F7B6003D3AFC /* Model.swift */; };
 		84CFF3472B016ABF00322734 /* CollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFF3462B016ABF00322734 /* CollectionCollectionViewController.swift */; };
 		84CFF3492B016D0600322734 /* CollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFF3482B016D0500322734 /* CollectCell.swift */; };
+		84D485EB2B03FAB700591CD4 /* EpisodesViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D485EA2B03FAB700591CD4 /* EpisodesViewControllerTableViewController.swift */; };
 		A362765D197E1D56710902D4 /* libPods-RickMorty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A90226FD7DD91D9DF7E496 /* libPods-RickMorty.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B341A778009DF7F6D4D8337 /* Pods-RickMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMorty.release.xcconfig"; path = "Target Support Files/Pods-RickMorty/Pods-RickMorty.release.xcconfig"; sourceTree = "<group>"; };
+		8493AD652B04C92000346088 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		84BEB2A12B00DC85003D3AFC /* RickMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BEB2A42B00DC85003D3AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BEB2A62B00DC85003D3AFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +36,10 @@
 		84BEB2B02B00DC87003D3AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BEB2B22B00DC87003D3AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84BEB2BA2B00F799003D3AFC /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		84BEB2BD2B00F7B6003D3AFC /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		84BEB2BD2B00F7B6003D3AFC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		84CFF3462B016ABF00322734 /* CollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		84CFF3482B016D0500322734 /* CollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCell.swift; sourceTree = "<group>"; };
+		84D485EA2B03FAB700591CD4 /* EpisodesViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		92B5EA97D2B3896D951A6204 /* Pods-RickMorty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMorty.debug.xcconfig"; path = "Target Support Files/Pods-RickMorty/Pods-RickMorty.debug.xcconfig"; sourceTree = "<group>"; };
 		E2A90226FD7DD91D9DF7E496 /* libPods-RickMorty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RickMorty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,7 +109,9 @@
 		84BEB2BC2B00F7A0003D3AFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84D485EA2B03FAB700591CD4 /* EpisodesViewControllerTableViewController.swift */,
 				84BEB2A82B00DC85003D3AFC /* ViewController.swift */,
+				8493AD652B04C92000346088 /* LocationViewController.swift */,
 				84CFF3462B016ABF00322734 /* CollectionCollectionViewController.swift */,
 				84BEB2BA2B00F799003D3AFC /* DetailsViewController.swift */,
 				84CFF3482B016D0500322734 /* CollectCell.swift */,
@@ -116,7 +122,7 @@
 		84BEB2BF2B015148003D3AFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84BEB2BD2B00F7B6003D3AFC /* TableModel.swift */,
+				84BEB2BD2B00F7B6003D3AFC /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,7 +245,9 @@
 				84BEB2A52B00DC85003D3AFC /* AppDelegate.swift in Sources */,
 				84CFF3492B016D0600322734 /* CollectCell.swift in Sources */,
 				84CFF3472B016ABF00322734 /* CollectionCollectionViewController.swift in Sources */,
-				84BEB2BE2B00F7B6003D3AFC /* TableModel.swift in Sources */,
+				84D485EB2B03FAB700591CD4 /* EpisodesViewControllerTableViewController.swift in Sources */,
+				84BEB2BE2B00F7B6003D3AFC /* Model.swift in Sources */,
+				8493AD662B04C92000346088 /* LocationViewController.swift in Sources */,
 				84BEB2A72B00DC85003D3AFC /* SceneDelegate.swift in Sources */,
 				84BEB2BB2B00F799003D3AFC /* DetailsViewController.swift in Sources */,
 			);

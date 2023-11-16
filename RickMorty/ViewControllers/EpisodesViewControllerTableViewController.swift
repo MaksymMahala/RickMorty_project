@@ -1,20 +1,19 @@
 //
-//  ViewController.swift
+//  EpisodesViewControllerTableViewController.swift
 //  RickMorty
 //
-//  Created by Maksym on 12.11.2023.
+//  Created by Maksym on 14.11.2023.
 //
 
 import UIKit
 
-class ViewController: UITableViewController {
-    var locations = [LocationUser]()
+class EpisodesViewController: UITableViewController {
+    var episode = [Episode]()
     var vm = ResponseAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        title = "Location"
+        title = "Episodes"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .black
         let appearance = UINavigationBarAppearance()
@@ -23,28 +22,27 @@ class ViewController: UITableViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         
         
-        self.vm.loadAPILocation(){ (result) in
-            self.locations = result
+        self.vm.loadAPIEpisode(){ (result) in
+            self.episode = result
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            
         }
-        
+
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations.count
+        return episode.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let textIndex = locations[indexPath.item]
-        cell.textLabel?.text = "\(textIndex.name)\n"
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 23)
-        cell.textLabel?.numberOfLines = 2
-        cell.detailTextLabel?.text = "\(textIndex.type)\n\n\(textIndex.dimension)"
+        let textIndex = episode[indexPath.item]
+        cell.textLabel?.text = "\(textIndex.episode)\n \nEpisode: \(textIndex.name)\n"
+        cell.textLabel?.numberOfLines = 4
+        cell.detailTextLabel?.text = "Aired on \(textIndex.air_date)"
         cell.textLabel?.textColor = .white
         cell.detailTextLabel?.textColor = .gray
-        cell.detailTextLabel?.numberOfLines = 3
         cell.backgroundColor = .black
         cell.layer.borderColor = CGColor(red: 0.3, green: 0.8, blue: 0.6, alpha: 1)
         cell.layer.borderWidth = 1
@@ -52,14 +50,5 @@ class ViewController: UITableViewController {
         cell.layer.cornerRadius = 10
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let location = storyboard?.instantiateViewController(withIdentifier: "Location") as? LocationViewController{
-            let indexLocation = locations[indexPath.item]
-            location.selectedLabel = indexLocation.name
-//          location.selectedCharacter = indexLocation.residents
-//            location.selectedCharacter = indexLocation.residents
-            navigationController?.pushViewController(location, animated: true)
-        }
-    }
-}
 
+}

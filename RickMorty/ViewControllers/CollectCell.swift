@@ -18,8 +18,9 @@ class CollectCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     
     func configure(with imageURL: URL) {
-            // Use SDWebImage to load and cache the image
         imageView.sd_setImage(with: imageURL, placeholderImage: UIImage(systemName: "heart"))
+        imageView.contentMode = .scaleToFill
+        imageView.layer.cornerRadius = 13
     }
 
 }
